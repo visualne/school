@@ -1,0 +1,30 @@
+---
+
+# Creating necessary Presidents group
+- name: Creating Presidents group
+  group: name=Presidents state=present
+
+# Creating necessary vicePresidents group
+- name: Creating VicePresidents group
+  group: name=vicePresidents state=present
+
+# Creating necessary Directors group
+- name: Creating Directors group
+  group: name=Directors state=present
+
+# Creating user 'John'
+- name: Creating user John O'Sulivan
+  user: name=john comment="John O'Sullivan" uid=1040 group=Presidents
+
+# Creating user 'David'
+- name: Creating user David Matchel
+  user: name=david comment="David Matchel" uid=1041 group=Presidents
+
+# Creating user 'Chris' and putting him in the vice presidents group
+- name: Creating user Chris Bursk
+  user: name=chris comment="Chris Bursk" uid=1042 group=vicePresidents
+
+# Creating user 'David' and putting him in the vice presidents group
+- name: Creating user Mike Keels
+  user: name=mike comment="Mike Keels" uid=1043 group=vicePresidents
+

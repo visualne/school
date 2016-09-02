@@ -1,0 +1,9 @@
+---
+
+# Creating necessary Presidents share
+- name: Creating Presidents share
+  file: path=/srv/PresidentsShare state=directory group=Presidents mode=2770
+
+# Creating necessary vicePresidents share
+- name: Creating vicePresidents share
+  file: path=/srv/vicePresidentsShare state=directory group=vicePresidents mode=2770

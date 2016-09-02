@@ -1,0 +1,15 @@
+---
+- hosts: storage-server
+  become: yes
+  become_method: sudo
+  roles:
+   - ansible-role-nfs
+   - user-group-creation
+   - share-points
+
+- hosts: storage-client
+  become: yes
+  become_method: sudo
+  roles:
+   - user-group-creation
+   - share-points
